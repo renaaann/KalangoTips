@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalangoTips</title>
+    <link rel="icon" sizes="35x35" type="image/x-icon" href="/imgs/Calango/Lizard-Icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pages/styles/calculator.css">
+</head>
+    <body>
+        <nav class="site-nav">
+            <h2 class="logo">KalangoTips</h2>
+
+            <div class="column-primary">
+                <a href="/index.html">🏠 Home</a>
+                <h2>Ferramentas</h2>
+                <a href="#" class="active">📐 Calculadora EV</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="ev-page-wrapper">
+                <div class="ev-info">
+                    <h1 class="ev-title">Calculadora EV</h1>
+                    <p class="ev-description">
+                        Utilize nossa ferramenta para descobrir o Valor Esperado (Expected Value) das suas apostas. 
+                        Insira as odds do mercado e a odd que você encontrou para saber se a sua entrada é lucrativa no longo prazo.
+                    </p>
+
+                    <details class="tutorial-dropdown">
+                        <summary>Tutorial de Uso</summary>
+                        <div class="tutorial-content">
+                            <p>Aprenda a usar a calculadora passo a passo neste vídeo:</p>
+                            <div class="video-responsive">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tutorial Calculadora EV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="calculator-box">
+                    <div class="calc-body-modern">
+                        <div class="input-group-modern">
+                            <label for="mercados">Número de Mercados</label>
+                            <div class="select-wrapper">
+                                <select id="mercados" name="mercados">
+                                    <option value="2">2 Mercados</option>
+                                    <option value="3">3 Mercados</option>
+                                    <option value="4">4 Mercados</option>
+                                    <option value="5">5 Mercados</option>
+                                    <option value="6">6 Mercados</option>
+                                    <option value="7">7 Mercados</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-row-modern">
+                            <div class="input-group-modern">
+                                <label for="odd-analisada">Odd Analisada</label>
+                                <input type="text" inputmode="decimal" id="odd-analisada" step="0.01">
+                            </div>
+                            <div class="input-group-modern">
+                                <label for="odd-encontrada">Sua Aposta</label>
+                                <input type="text" inputmode="decimal" id="odd-encontrada" step="0.01">
+                            </div>
+                        </div>
+
+                        <div id="container-odds-contrarias" style="display: flex;flex-direction: column; gap: 1.2rem;">
+                            <div class="input-group-modern">
+                                <label for="odd-contraria-1">Odd Contrária 1</label>
+                                <input type="text" inputmode="decimal" id="odd-contraria-1" step="0.01">
+                            </div>
+                        </div>
+
+                        <button id="calcular-button" class="btn-calc-modern">Calcular</button>
+                    </div>
+
+                    <div class="calc-results-grid">
+                        <div class="res-card">
+                            <span class="res-label">% Payout</span>
+                            <span class="res-value">---</span>
+                        </div>
+                        <div class="res-card">
+                            <span class="res-label">Odd Justa</span>
+                            <span class="res-value">---</span>
+                        </div>
+                        <div class="res-card">
+                            <span class="res-label">Stake (Kelly)</span>
+                            <span class="res-value">---</span>
+                        </div>
+                    </div>
+
+                    <div class="calc-verdict positive">
+                        <div class="verdict-info">
+                            <span class="v-title">Valor Positivo (EV+)</span>
+                            <span class="v-number">---</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="/script.js"></script>
+    </body>
+</html>

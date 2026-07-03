@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Helvetica, sans-serif;
+    background: #f7f8f7;
+    color: #2b2b2b;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 3rem 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.ev-page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    gap: 4rem;
+}
+
+.ev-info {
+    flex: 1;
+    min-width: 300px;
+    color: #2b2b2b;
+}
+
+.ev-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+}
+
+.ev-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #616161;
+}
+
+.tutorial-dropdown {
+    background: #ffffff;
+    border: 1px solid #dce7d7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.tutorial-dropdown summary {
+    padding: 1.2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: #f8fbf6;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c2c2c;
+    transition: background 0.2s ease;
+}
+
+.tutorial-dropdown summary:hover {
+    background: #eef7ea;
+}
+
+.tutorial-dropdown summary::after {
+    content: '\25BC';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    color: #5CA321;
+}
+
+.tutorial-dropdown[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.tutorial-dropdown p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #616161;
+}
+
+.tutorial-content {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Calculator Box */
+.calculator-box {
+    background: #ffffff;
+    width: 100%;
+    flex: 0 1 460px;
+    border-radius: 14px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 30px rgba(92, 163, 33, 0.08);
+    color: #2b2b2b;
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+}
+
+.calc-header-modern {
+    margin-bottom: 2rem;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.3rem;
+}
+
+.calc-header-modern h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2d2d2d;
+    letter-spacing: -0.5px;
+}
+
+.calc-header-modern p {
+    font-size: 0.9rem;
+    color: #616161;
+    margin: 0;
+}
+
+.calc-body-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.input-row-modern {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-row-modern .input-group-modern {
+    flex: 1;
+}
+
+.input-group-modern label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #616161;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group-modern input,
+.select-wrapper select {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #dce7d7;
+    color: #2b2b2b;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.input-group-modern input:focus,
+.select-wrapper select:focus {
+    box-shadow: 0 0 0 4px rgba(92, 163, 33, 0.15);
+    background-color: #f8fbf6;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: '\25BC';
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #5CA321;
+    pointer-events: none;
+}
+
+.btn-calc-modern {
+    background: #5CA321;
+    color: #ffffff;
+    border: none;
+    padding: 1.1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    transition: .25s ease;
+}
+
+.btn-calc-modern:hover {
+    background: #4B8A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(92, 163, 33, 0.2);
+}
+
+.calc-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dce7d7;
+}
+
+.res-card {
+    background: #f8fbf6;
+    border: 1px solid #dce7d7;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.res-label {
+    font-size: 0.75rem;
+    color: #616161;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.res-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.calc-verdict {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.verdict-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.v-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.v-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Negative / Positive Switches */
+
+.calc-verdict.negative {
+    background: #fff0f0;
+    border: 1px solid #ffcccc;
+}
+
+.calc-verdict.negative .v-title { color: #d63031; }
+.calc-verdict.negative .v-number { color: #d63031; }
+
+.calc-verdict.positive {
+    background: #eef7ea;
+    border: 1px solid #dce7d7;
+}
+
+.calc-verdict.positive .v-title { color: #4B8A1A; }
+.calc-verdict.positive .v-number { color: #5CA321; }
